@@ -19,15 +19,23 @@ public class ProductMain {
 		
 		list.add(new Product(4,"Cloths",7000 ));
 		
-		//Convert to Map
-		Map<Integer,String > map=
+		//list convert to Map
+		Map<Integer,String > map1=
 		list.
 		stream().
 		collect(Collectors.toMap(p1->p1.getProductId(),p1->p1.getProductName()));
 		
 		//Print the map value
-		map.forEach((k,v)->System.out.println("Product Id: "+k+ " Product Name: "+v));
-
-	
+		map1.forEach((k,v)->System.out.println("Product Id: "+k+ " Product Name: "+v));
+		
+		//list convert to map if price is greater than 10000
+		
+		Map<Integer, String >map2=
+		list.
+		stream().
+		filter(p->p.getPrice()>10000).
+		collect(Collectors.toMap(p1->p1.getProductId(),p1->p1.getProductName()));
+System.out.println("After Applying Price Condition");
+		map2.forEach((k,v)->System.out.println("Product Id: "+k+ " Product Name: "+v));
 	}
 }
