@@ -39,5 +39,16 @@ public class ProductMain {
 		System.out.println("If Mobile and Laptop available in List");
 		map3.forEach((k, v) -> System.out.println("Product Id: " + k + " Product Name: " + v));
 
+		//convert list of product to list of categary
+        List<ProductCategory> pcategary =
+		list.
+		stream().
+		filter(p->p.getPrice()>10000).
+		map(
+				a->new ProductCategory(a.getProductId(),a.getProductName())
+				).
+		collect(Collectors.toList());
+        
+        pcategary.forEach(k->System.out.println(k));
 	}
 }

@@ -21,6 +21,10 @@ public class ProductCategory {
 		this.productId = productId;
 		this.proudctName = proudctName;
 	}
+	@Override
+	public String toString() {
+		return "ProductCategory [productId=" + productId + ", proudctName=" + proudctName + "]";
+	}
 	
 	
 
