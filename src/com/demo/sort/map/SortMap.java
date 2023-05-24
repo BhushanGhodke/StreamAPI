@@ -21,14 +21,14 @@ public class SortMap {
 
 		System.out.println("Sorting HashMap Key in ascending order");
 	
-		//Sort the hashmap in ascending order
+		//Sort the hashmap Key in ascending order
 		hmap.
 		entrySet().
 		stream().
 		sorted((p1, p2) -> p1.getKey().compareTo(p2.getKey())).
 		forEach(k -> System.out.println("key: " + k.getKey() + " Value :" + k.getValue()));
 	
-		//Sort the hashmap in descending order
+		//Sort the hashmap Key in descending order
 		
 		System.out.println("Sorting Hashmap Key in Descending Order");
 		hmap.
@@ -36,6 +36,9 @@ public class SortMap {
 		stream().
 		sorted((p1,p2)->p2.getKey().compareTo(p1.getKey())).
 		forEach(k->System.out.println("Key: "+k.getKey()+" Value: "+k.getValue()));
+		
+		
+		
 		
 	
 	}
