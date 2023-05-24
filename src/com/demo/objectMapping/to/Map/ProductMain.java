@@ -50,5 +50,6 @@ public class ProductMain {
 		collect(Collectors.toList());
         
         pcategary.forEach(k->System.out.println(k));
+       
 	}
 }
